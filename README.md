@@ -92,7 +92,7 @@ npm run test
 
 ## 📝 Latihan Mandiri
 
-### Latihan Mandiri: Eksplorasi HMR (Hot Module Replacement)
+### 1. Latihan Mandiri: Eksplorasi HMR (Hot Module Replacement)
 Ganti nilai background-color pada .App-header di App.css menjadi #0d9488. Simpan file dan lihat perubahan warna di browser yang terjadi seketika tanpa perlu me-reload halaman.
 
 #### Jawaban :
@@ -102,3 +102,40 @@ File src/App.css:
   background-color: #0d9488;
 }
  ```
+Fitur Hot Module Replacement (HMR) dari Vite memungkinkan perubahan gaya CSS langsung diterapkan di browser secara real-time tanpa melakukan refresh/reload halaman secara keseluruhan, sehingga state aplikasi tetap terjaga.
+
+Bukti SS implementasi :
+
+
+### 2. Latihan Mandiri: Children Props
+Buat komponen src/components/Card/Card.jsx yang merender wadah berbingkai dengan props.children. Gunakan komponen Card untuk membungkus form TaskForm.
+
+#### Jawaban :
+File src/components/Card/Card.jsx:
+ ```bash
+import React from 'react';
+import './Card.css';
+
+const Card = ({ children }) => {
+  return (
+    <div className="card-wrapper">
+      {children}
+    </div>
+  );
+};
+
+export default Card;
+ ```
+
+Penggunaan pada src/pages/Home/Home.jsx:
+ ```bash
+import Card from '../../components/Card/Card';
+import TaskForm from '../../components/TaskForm/TaskForm';
+
+// Pembungkusan komponen TaskForm dengan Card
+<Card>
+  <TaskForm onAddTask="{handleAddTask}"/>
+</Card>
+ ```
+
+Bukti SS implementasi :
