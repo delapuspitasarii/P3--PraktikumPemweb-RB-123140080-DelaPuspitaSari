@@ -105,7 +105,7 @@ File src/App.css:
 Fitur Hot Module Replacement (HMR) dari Vite memungkinkan perubahan gaya CSS langsung diterapkan di browser secara real-time tanpa melakukan refresh/reload halaman secara keseluruhan, sehingga state aplikasi tetap terjaga.
 
 Bukti SS implementasi Eksplorasi HMR:
-
+![Eksplorasi HMR](./screenshoot/Eksplorasi%20HMR%20.png)
 
 
 ### 2. Latihan Mandiri: Children Props
@@ -140,7 +140,7 @@ import TaskForm from '../../components/TaskForm/TaskForm';
  ```
 
 Bukti SS implementasi Children Props:
-
+![Children Props](./screenshoot/Children%20Props.png)
 
 
 ### 3. Latihan Mandiri: Tombol Bersihkan Semua
@@ -169,7 +169,7 @@ return (
  ```
 
 Bukti SS implementasi Tombol Bersihkan Semua:
-
+![Tombol Bersihkan Semua](./screenshoot/Tombol%20Bersihkan%20Semua.png)
 
 
 ### 4. Latihan Mandiri: Halaman 404 (Not Found)
@@ -207,7 +207,7 @@ import NotFound from './pages/NotFound/NotFound';
  ```
 
 Bukti SS implementasi Halaman 404 (Not Found):
-
+![Halaman 404](./screenshoot/Halaman%20404%20%28Not%20Found%29.png)
 
 
 ### 5. Latihan Mandiri: Terapkan useWindowSize
@@ -237,8 +237,10 @@ const Home = () => {
 
 Bukti SS implementasi : Terapkan useWindowSize
 - ss mobile
+  ![SS Mobile](./screenshoot/ss%20mobile.png)
+  
 - ss dekstop
-
+  ![SS Desktop](./screenshoot/ss%20dekstop.png)
 
 
 ### 6. Latihan Mandiri: Tampilkan Statistik di Halaman About
@@ -265,3 +267,4 @@ export default About;
  ```
 
 Bukti SS implementasi Tampilkan Statistik di Halaman About:
+![Tampilkan Statistik di Halaman About](./screenshoot/Tampilkan%20Statistik%20di%20Halaman%20About.png)
