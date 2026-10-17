@@ -61,23 +61,31 @@ my-react-app/
 
 1. **Masuk ke Directory Proyek**:
    ```bash
-   cd Pertemuan3_PrakPemweb/my-react-app ```
+   cd Pertemuan3_PrakPemweb/my-react-app
 
-2. **Install Dependensi:**
+    ```
+
+3. **Install Dependensi:**
 
 ```bash
-npm install ```
+npm install
+
+```
 
 
 3. **Jalankan Development Server:**
 
 ```bash
-npm run dev ```
+npm run dev
+
+```
 
 Buka URL lokal yang muncul di terminal (biasanya http://localhost:5173/).
 
 
 4.**Menjalankan Pengujian (Testing):**
  ```bash
-npm run test ```
+npm run test
+
+```
    
