@@ -61,7 +61,7 @@ my-react-app/
 
 1. **Masuk ke Directory Proyek**:
 ```bash
-   cd Pertemuan3_PrakPemweb/my-react-app
+cd Pertemuan3_PrakPemweb/my-react-app
 
 ```
 
@@ -104,7 +104,8 @@ File src/App.css:
  ```
 Fitur Hot Module Replacement (HMR) dari Vite memungkinkan perubahan gaya CSS langsung diterapkan di browser secara real-time tanpa melakukan refresh/reload halaman secara keseluruhan, sehingga state aplikasi tetap terjaga.
 
-Bukti SS implementasi :
+Bukti SS implementasi Eksplorasi HMR:
+
 
 
 ### 2. Latihan Mandiri: Children Props
@@ -138,4 +139,129 @@ import TaskForm from '../../components/TaskForm/TaskForm';
 </Card>
  ```
 
-Bukti SS implementasi :
+Bukti SS implementasi Children Props:
+
+
+
+### 3. Latihan Mandiri: Tombol Bersihkan Semua
+Buka file src/pages/Home/Home.jsx, lalu tambahkan tombol "Hapus Semua Tugas" di samping panel statistik. Ketika tombol diklik, panggil setTasks([]) setelah memunculkan dialog konfirmasi window.confirm().
+
+#### Jawaban :
+File src/pages/Home/Home.jsx:
+ ```bash
+const handleClearAll = () => {
+  const isConfirmed = window.confirm("Apakah Anda yakin ingin menghapus semua tugas?");
+  if (isConfirmed) {
+    setTasks([]);
+  }
+};
+
+return (
+  <div className="home-container">
+    <div className="stats-panel">
+      {/* Panel statistik */}
+      <button className="btn-clear-all" onClick={handleClearAll}>
+        Hapus Semua Tugas
+      </button>
+    </div>
+  </div>
+);
+ ```
+
+Bukti SS implementasi Tombol Bersihkan Semua:
+
+
+
+### 4. Latihan Mandiri: Halaman 404 (Not Found)
+Buat komponen src/pages/NotFound/NotFound.jsx. Tambahkan rute penangkap fallback <Route path="*" element={<NotFound />} /> di App.jsx sehingga saat pengguna mengetik URL acak (misal /halaman-salah), muncul pesan 404 yang rapi.
+
+#### Jawaban :
+File src/pages/NotFound/NotFound.jsx:
+ ```bash
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './NotFound.css';
+
+const NotFound = () => {
+  return (
+    <div className="notfound-container">
+      <h1>404 - Halaman Tidak Ditemukan</h1>
+      <p>Maaf, halaman yang Anda cari tidak ditemukan atau telah dipindahkan.</p>
+      <Link className="btn-home" to="/">Kembali ke Beranda</Link>
+    </div>
+  );
+};
+
+export default NotFound;
+ ```
+
+File src/App.jsx:
+ ```bash
+import { Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound/NotFound';
+
+<Routes>
+  {/* Rute lainnya */}
+  <Route element="{<NotFound" path="*"/>} />
+</Routes>
+ ```
+
+Bukti SS implementasi Halaman 404 (Not Found):
+
+
+
+### 5. Latihan Mandiri: Terapkan useWindowSize
+Gunakan hook useWindowSize() pada komponen Home untuk menampilkan label status: jika width < 768px tampilkan badge "Mode Layar Mobile", jika tidak tampilkan "Mode Layar Desktop".
+
+#### Jawaban :
+File src/pages/Home/Home.jsx:
+ ```bash
+import useWindowSize from '../../hooks/useWindowSize';
+
+const Home = () => {
+  const { width } = useWindowSize();
+
+  return (
+    <div className="home-header">
+      <div className="screen-status-badge">
+        {width < 768 ? (
+          <span className="badge mobile">Mode Layar Mobile</span>
+        ) : (
+          <span className="badge desktop">Mode Layar Desktop</span>
+        )}
+      </div>
+    </div>
+  );
+};
+ ```
+
+Bukti SS implementasi : Terapkan useWindowSize
+- ss mobile
+- ss dekstop
+
+
+
+### 6. Latihan Mandiri: Tampilkan Statistik di Halaman About
+Buka file src/pages/About/About.jsx, impor useTasks(), dan tampilkan kalimat: "Saat ini Anda memiliki total [stats.total] tugas yang tersimpan di sistem.".
+
+#### Jawaban :
+File src/pages/About/About.jsx:
+ ```bash
+import React from 'react';
+import { useTasks } from '../../context/TaskContext';
+
+const About = () => {
+  const { stats } = useTasks();
+
+  return (
+    <div className="about-page">
+      <h2>Tentang Aplikasi</h2>
+      <p>Saat ini Anda memiliki total {stats?.total || 0} tugas yang tersimpan di sistem.</p>
+    </div>
+  );
+};
+
+export default About;
+ ```
+
+Bukti SS implementasi Tampilkan Statistik di Halaman About:
