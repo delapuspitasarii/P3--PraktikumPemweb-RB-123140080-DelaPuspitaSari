@@ -65,18 +65,19 @@ my-react-app/
 
 **Install Dependensi:**
 
-Bash
+```Bash
 npm install
 
 
 **Jalankan Development Server:**
 
-Bash
+```Bash
 npm run dev
 
 Buka URL lokal yang muncul di terminal (biasanya http://localhost:5173/).
 
 
 **Menjalankan Pengujian (Testing):**
-
+```Bash
+npm run test
    
