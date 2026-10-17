@@ -63,10 +63,10 @@ my-react-app/
 ```bash
    cd Pertemuan3_PrakPemweb/my-react-app
 
-    ```
+```
 
 2. **Install Dependensi:**
-
+   
 ```bash
 npm install
 
