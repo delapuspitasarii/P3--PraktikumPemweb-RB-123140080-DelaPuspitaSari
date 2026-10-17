@@ -60,7 +60,7 @@ my-react-app/
 ## 🚀 Cara Menjalankan Proyek
 
 1. **Masuk ke Directory Proyek**:
-   ```bash
+```bash
    cd Pertemuan3_PrakPemweb/my-react-app
 
     ```
@@ -83,7 +83,7 @@ npm run dev
 Buka URL lokal yang muncul di terminal (biasanya http://localhost:5173/).
 
 
-4.**Menjalankan Pengujian (Testing):**
+4. **Menjalankan Pengujian (Testing):**
  ```bash
 npm run test
 
