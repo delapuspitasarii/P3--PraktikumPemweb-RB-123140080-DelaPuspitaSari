@@ -65,7 +65,7 @@ my-react-app/
 
     ```
 
-3. **Install Dependensi:**
+2. **Install Dependensi:**
 
 ```bash
 npm install
