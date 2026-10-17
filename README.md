@@ -55,7 +55,7 @@ my-react-app/
 ├── package.json
 └── vite.config.js
 
-
+```
 
 ## 🚀 Cara Menjalankan Proyek
 
