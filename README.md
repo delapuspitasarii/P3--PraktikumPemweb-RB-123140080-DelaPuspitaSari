@@ -88,4 +88,17 @@ Buka URL lokal yang muncul di terminal (biasanya http://localhost:5173/).
 npm run test
 
 ```
-   
+
+
+## 📝 Latihan Mandiri
+
+### Latihan Mandiri: Eksplorasi HMR (Hot Module Replacement)
+Ganti nilai background-color pada .App-header di App.css menjadi #0d9488. Simpan file dan lihat perubahan warna di browser yang terjadi seketika tanpa perlu me-reload halaman.
+
+#### Jawaban :
+File src/App.css:
+ ```bash
+.App-header {
+  background-color: #0d9488;
+}
+ ```
